@@ -62,9 +62,11 @@ export type Topic = {
     language?: string;
     name: string;
     id?: string;
+    path?: string;
     parentId?: string;
     pathIdentifier?: string;
     children?: Topic[];
+    descendants?: Topic[];
 };
 
 export const TopicSchema: z.ZodType<Topic> = z.lazy(() =>
